@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: #070b14;
+    --panel: #101827;
+    --blue: #00bfff;
+    --red: #ff3155;
+    --white: #f4f7ff;
+    --muted: #a5b0c4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #0b1220;
+    border-bottom: 1px solid #1b2a40;
+    gap: 20px;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span, h1 span {
+    color: var(--blue);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 90px 8%;
+    min-height: 550px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(32px, 4vw, 53px);
+    line-height: 1.25;
+    margin: 15px 0;
+}
+
+.hero p, .intro {
+    color: var(--muted);
+}
+
+.hero-image img, .ai-section img {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.tag {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: #00101a;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .2s;
+}
+
+.btn:hover {
+    background: #70ddff;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 75px 8%;
+}
+
+.section h2, .ai-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(25px, 3vw, 34px);
+    margin: 10px 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid #24344b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card h3 {
+    color: var(--blue);
+    margin-bottom: 8px;
+}
+
+.card p, .ai-section p {
+    color: var(--muted);
+}
+
+.ai-section {
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    background: #0b1423;
+}
+
+.ai-section img {
+    max-height: 350px;
+}
+
+.protection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.protection-item {
+    background: var(--panel);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #24344b;
+}
+
+.protection-item span {
+    color: var(--red);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+}
+
+.protection-item h3 {
+    margin: 10px 0;
+}
+
+.protection-item p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.quiz-call {
+    background: linear-gradient(120deg, #102d48, #101827);
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.quiz-call h2 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #050810;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* QUIZ */
+
+.quiz-page, .admin-page {
+    padding: 55px 20px;
+    min-height: 85vh;
+}
+
+.quiz-box, .admin-box {
+    max-width: 750px;
+    margin: auto;
+    background: var(--panel);
+    padding: 35px;
+    border: 1px solid #263c55;
+    border-radius: 14px;
+}
+
+.quiz-box h1, .admin-box h1 {
+    font-family: 'Orbitron', sans-serif;
+    margin: 10px 0;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: var(--muted);
+}
+
+.quiz-progress {
+    height: 7px;
+    background: #26344a;
+    border-radius: 10px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background: var(--blue);
+    transition: .3s;
+}
+
+#question {
+    margin: 25px 0;
+}
+
+.answers {
+    display: grid;
+    gap: 12px;
+}
+
+.answer {
+    background: #182438;
+    border: 1px solid #33445d;
+    color: var(--white);
+    padding: 15px;
+    border-radius: 7px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.answer:hover:not(:disabled) {
+    border-color: var(--blue);
+}
+
+.answer.correct {
+    border-color: #35d48a;
+    background: #123b32;
+}
+
+.answer.wrong {
+    border-color: var(--red);
+    background: #421b2a;
+}
+
+.answer:disabled {
+    cursor: default;
+}
+
+#feedback {
+    margin-top: 20px;
+    color: var(--muted);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ADMIN */
+
+.admin-box form {
+    display: grid;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.admin-box input, .admin-box textarea, .admin-box select {
+    width: 100%;
+    padding: 12px;
+    background: #080f1c;
+    color: white;
+    border: 1px solid #35455d;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.admin-box textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.admin-box label {
+    font-weight: 600;
+}
+
+.admin-question {
+    background: #182438;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.admin-question button {
+    margin-right: 8px;
+}
+
+.delete-button {
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
+
+    .hero, .ai-section {
+        grid-template-columns: 1fr;
+        padding: 50px 6%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .protection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .protection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-box, .admin-box {
+        padding: 22px;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração | CyberGuard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">CYBER<span>GUARD</span></div>
+    <nav>
+        <a href="index.html">Ver site</a>
+        <a href="quiz.html">Ver quiz</a>
+    </nav>
+</header>
+
+<main class="admin-page">
+    <div class="admin-box">
+        <p class="tag">ÁREA RESTRITA</p>
+        <h1>Painel de administração</h1>
+        <p>Gerencie as perguntas e respostas do quiz.</p>
+
+        <form id="question-form">
+            <label for="question-text">Pergunta</label>
+            <textarea id="question-text" required></textarea>
+
+            <label>Alternativas</label>
+
+            <input id="option-A" placeholder="Alternativa A" required>
+            <input id="option-B" placeholder="Alternativa B" required>
+            <input id="option-C" placeholder="Alternativa C" required>
+            <input id="option-D" placeholder="Alternativa D" required>
+            <input id="option-E" placeholder="Alternativa E" required>
+
+            <label for="correct-answer">Resposta correta</label>
+            <select id="correct-answer">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+
+            <label for="explanation">Explicação da resposta</label>
+            <textarea id="explanation" required></textarea>
+
+            <button type="submit" class="btn">
+                Salvar pergunta
+            </button>
+        </form>
+
+        <h2>Perguntas cadastradas</h2>
+        <div id="question-list"></div>
+    </div>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
